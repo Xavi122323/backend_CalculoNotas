@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: backend_CalculoNotas_production
   username: backend_CalculoNotas
   password: <%= ENV["BACKEND_CALCULONOTAS_DATABASE_PASSWORD"] %>
