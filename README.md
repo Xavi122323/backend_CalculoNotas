@@ -1,24 +1,31 @@
-# README
+## Guia de Ruby
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## --------------------------------------------------------------- -> rails
 
-Things you may want to cover:
+rails new backend_CalculoNotas --api -d=postgresql
 
-* Ruby version
+rails generate model Alumno nombre:string
 
-* System dependencies
+rails generate model Nota nota:float fecha:date alumno:references
 
-* Configuration
+rails generate controller api/v1/calculo_nota index --skip-routes
 
-* Database creation
+## --------------------------------------------------------------- -> postgresql
 
-* Database initialization
+psql -Upostgres
 
-* How to run the test suite
+create user minicore;
 
-* Services (job queues, cache servers, search engines, etc.)
+alter user minicore with password 'miniCore2024';
 
-* Deployment instructions
+alter user minicore with NOSUPERUSER CREATEDB CREATEROLE INHERIT LOGIN REPLICATION;
 
-* ...
+## --------------------------------------------------------------- -> rails
+
+rails db:create
+
+rails db:migrate
+
+rails db:seed
+
+bundle install
