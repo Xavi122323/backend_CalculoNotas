@@ -14,7 +14,7 @@ class Alumno < ApplicationRecord
           progreso3_grade = 6 - (progreso1_grade + progreso2_grade)
     
           
-          { alumno_id: alumno.id, progreso1_grade: progreso1_grade, progreso2_grade: progreso2_grade, progreso3_grade: progreso3_grade }
+          { alumno_id: alumno.id, nombre: alumno.nombre, progreso1_grade: progreso1_grade, progreso2_grade: progreso2_grade, progreso3_grade: progreso3_grade }
         end
       end
 
