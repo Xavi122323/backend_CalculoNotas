@@ -42,6 +42,7 @@ end
 
 puts 'Seeds created successfully!'
 
+=begin
 date_ranges = [
   ('01/10/2023'.to_date..'31/10/2023'.to_date),
   ('01/11/2023'.to_date..'30/11/2023'.to_date),
@@ -62,3 +63,4 @@ alumnos.each do |alumno|
 end
 
 puts 'Seeds created successfully!'
+=end
