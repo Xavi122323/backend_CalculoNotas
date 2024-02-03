@@ -41,3 +41,24 @@ notas_data.each do |nota|
 end
 
 puts 'Seeds created successfully!'
+
+date_ranges = [
+  ('01/10/2023'.to_date..'31/10/2023'.to_date),
+  ('01/11/2023'.to_date..'30/11/2023'.to_date),
+  ('01/12/2023'.to_date..'31/12/2023'.to_date),
+  ('01/01/2024'.to_date..'31/01/2024'.to_date)
+]
+
+alumnos = Alumno.all
+
+alumnos.each do |alumno|
+  20.times do
+    Nota.create(
+      nota: rand(1.0..10.0).round(2),
+      fecha: date_ranges.sample.to_a.sample,
+      alumno_id: alumno.id
+    )
+  end
+end
+
+puts 'Seeds created successfully!'
