@@ -61,3 +61,5 @@ rails db:migrate
 rails db:seed
 
 bundle install
+
+bundle
